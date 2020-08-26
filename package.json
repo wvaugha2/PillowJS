@@ -1,0 +1,18 @@
+{
+  "name": "pillow-rest-js",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvaugha2/PillowJS.git"
+  },
+  "author": "Ty Vaughan",
+  "licence": "MIT",
+  "dependencies": {
+    "js-cookie": "^2.2.1",
+    "rfdc": "^1.1.4"
+  }
+}
