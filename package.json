@@ -1,5 +1,18 @@
 {
   "name": "pillow-rest-js",
+  "description": "REST Easy - Http Client",
+  "keywords": [
+    "http",
+    "https",
+    "rest",
+    "simple",
+    "easy",
+    "util",
+    "utility",
+    "pillow",
+    "request"
+  ],
+  "author": "Ty Vaughan",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {
@@ -9,7 +22,13 @@
     "type": "git",
     "url": "git+https://github.com/wvaugha2/PillowJS.git"
   },
-  "author": "Ty Vaughan",
+  "bugs": {
+    "url": "https://github.com/wvaugha2/PillowJS/issues"
+  },
+  "files": [
+    "index.js",
+    "lib/"
+  ],
   "licence": "MIT",
   "dependencies": {
     "js-cookie": "^2.2.1",
