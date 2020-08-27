@@ -36,7 +36,9 @@ describe('useHttpsProtocol', () => {
   });
 
   it('should return null if an invalid input is provided', () => {
-    const result = useHttpsProtocol(5);
+    let result = useHttpsProtocol('localhost');
+    expect(result).to.equal(null);
+    result = useHttpsProtocol(5);
     expect(result).to.equal(null);
   });
 });
