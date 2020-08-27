@@ -16,7 +16,7 @@
   "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {
-    "test": ""
+    "test": "nyc mocha ./test/*"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,10 @@
   "dependencies": {
     "js-cookie": "^2.2.1",
     "rfdc": "^1.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.2",
+    "nyc": "^15.1.0"
   }
 }
