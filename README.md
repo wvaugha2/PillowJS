@@ -20,6 +20,7 @@ const response = await request.get('http://destination.com').call()
 - [Making a Request](#making-a-request)
   - [Step-wise Requests](#step-wise-request-building)
   - [Standardized Requests](#standardized-request-methods)
+  - [Uncommon Request Methods](#uncommon-request-methods)
 - [Callbacks and Promises](#callbacks-or-promises)
 - [Future Updates](#future-updates)
 
@@ -99,6 +100,14 @@ pillow.post/.put/.patch(
 Here's an example of making the same request as above using the standardized methods:
 ```javascript
 const response = await pillow.post('http://posturl.com', {color: 'red'});
+```
+[back to top](#table-of-contents)
+
+### Uncommon Request Methods
+What if you want to perform a HTTP method other than GET, POST, PUT, PATCH, or DELETE? You can create a request object and use two step-wise request methods: `setMethod` and `setUrl`:
+```javascript
+const request = pillow.getRequest();
+request.setMethod('TRACE').setUrl('http://traceurl.com');
 ```
 [back to top](#table-of-contents)
 

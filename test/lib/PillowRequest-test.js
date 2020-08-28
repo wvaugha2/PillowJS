@@ -103,6 +103,38 @@ describe('PillowRequest.get/.post/.put/.patch/.delete', () => {
   });
 });
 
+describe('PillowRequest.setMethod', () => {
+  it('should set the method property if a valid input is provided', () => {
+    let pr = new PillowRequest();
+    pr.setMethod('TRACE');
+    expect(pr).to.be.instanceOf(PillowRequest);
+    expect(pr).to.have.property('method');
+    expect(pr.method).to.equal('TRACE');
+
+    pr = new PillowRequest();
+    pr.setMethod(5);
+    expect(pr).to.be.instanceOf(PillowRequest);
+    expect(pr).to.have.property('method');
+    expect(pr.method).to.equal(null);
+  });
+});
+
+describe('PillowRequest.setUrl', () => {
+  it('should set the url property if a valid input is provided', () => {
+    let pr = new PillowRequest();
+    pr.setUrl('https://localhost');
+    expect(pr).to.be.instanceOf(PillowRequest);
+    expect(pr).to.have.property('url');
+    expect(pr.url).to.equal('https://localhost');
+
+    pr = new PillowRequest();
+    pr.setUrl(5);
+    expect(pr).to.be.instanceOf(PillowRequest);
+    expect(pr).to.have.property('url');
+    expect(pr.method).to.equal(null);
+  });
+});
+
 describe('PillowRequest.authByUser', () => {
   it('should set the username and password for basic auth if valid inputs are provided', () => {
     let pr = new PillowRequest();
