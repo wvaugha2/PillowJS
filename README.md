@@ -5,6 +5,10 @@ Our goal is to give you the tools to easily perform REST calls the way you want,
 
 [![NPM](https://nodei.co/npm/pillow-rest-js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/pillow-rest-js/)
 
+[![Build Status](https://travis-ci.com/wvaugha2/PillowJS.svg?branch=master)](https://travis-ci.com/wvaugha2/PillowJS)
+[![Vulnerabilities](https://snyk.io/test/github/wvaugha2/PillowJs/badge.svg)](https://snyk.io/test/github/wvaugha2/PillowJS)
+[![GitHub license](https://img.shields.io/github/license/wvaugha2/PillowJS)](https://github.com/wvaugha2/PillowJS/blob/master/LICENSE)
+
 ## Incredibly easy to get started
 Making a request with PillowJS is as simple as it is shown below
 ```javascript
