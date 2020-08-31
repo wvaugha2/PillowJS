@@ -2,7 +2,7 @@ const mocha = require('mocha');
 const chai = require('chai');
 const expect = chai.expect;
 
-const { isArrayOfStr, useHttpsProtocol, getCookieNameAndValue } = require('../../lib/util');
+const { isArrayOfStr, useHttpsProtocol, getCookieNameAndValue, queryStringParser } = require('../../lib/util');
 
 describe('isArrayOfStr', () => {
   it('should return true if an array of strings is input', () => {
@@ -64,3 +64,19 @@ describe('getCookieNameAndValue', () => {
     expect(result).to.equal(null);
   });
 });
+
+describe('queryStringParser', () => {
+  it('should return an object of parsed query parameters if a valid input was provided', () => {
+    const result = queryStringParser('?p1=v1&p2=v2');
+    expect(result).to.be.a('object');
+    expect(result).to.have.property('p1');
+    expect(result.p1).to.eql(['v1']);
+    expect(result).to.have.property('p2');
+    expect(result.p2).to.eql(['v2']);
+  });
+
+  it('should return null if an invalid input was provided', () => {
+    const result = queryStringParser(5);
+    expect(result).to.equal(null);
+  });
+})
