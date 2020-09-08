@@ -436,4 +436,48 @@ describe('PillowRequest.call', () => {
     expect(result).to.have.property('response');
     expect(result).to.have.property('body');
   });
+
+  describe('PillowRequest.reset', () => {
+    it('should reset all properties of the request object to their initial default values', () => {
+      let pr = new PillowRequest();
+      pr.reset();
+      expect(pr).to.have.property('useHttps');
+      expect(pr.useHttps).to.equal(null);
+      expect(pr).to.have.property('url');
+      expect(pr.url).to.equal(null);
+      expect(pr).to.have.property('method');
+      expect(pr.method).to.equal(null);
+      expect(pr).to.have.property('authUN');
+      expect(pr.authUN).to.equal(null);
+      expect(pr).to.have.property('authPW');
+      expect(pr.authPW).to.equal(null);
+      expect(pr).to.have.property('token');
+      expect(pr.token).to.equal(null);
+      expect(pr).to.have.property('headers');
+      expect(pr.headers).to.equal(null);
+      expect(pr).to.have.property('params');
+      expect(pr.params).to.equal(null);
+      expect(pr).to.have.property('body');
+      expect(pr.body).to.equal(null);
+      expect(pr).to.have.property('contentType');
+      expect(pr.contentType).to.equal(null);
+      expect(pr).to.have.property('withCreds');
+      expect(pr.withCreds).to.equal(false);
+      expect(pr).to.have.property('timeout');
+      expect(pr.timeout).to.equal(null);
+
+      expect(pr).to.have.property('response');
+      expect(pr.response).to.equal(null);
+      expect(pr).to.have.property('responseError');
+      expect(pr.responseError).to.equal(null);
+      expect(pr).to.have.property('responseBody');
+      expect(pr.responseBody).to.equal(null);
+      expect(pr).to.have.property('generalCallback');
+      expect(pr.generalCallback).to.equal(null);
+      expect(pr).to.have.property('successCallback');
+      expect(pr.successCallback).to.equal(null);
+      expect(pr).to.have.property('errorCallback');
+      expect(pr.errorCallback).to.equal(null);
+    });
+  });
 })

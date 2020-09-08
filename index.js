@@ -16,11 +16,11 @@ module.exports.getRequest = (useHttps=false) => {
  * @param {string} url - the full destination url for the request
  * @param {{headers?: {[header: string]: string|string[]}, params?: {[param: string]: string|string[]}}} options - the headers and parameters to send with the request
  * @param {{username?: string, password?: string, token?: string}} [auth] - the username and password or token value to use for authentication
- * @param {boolean} [withCredentials] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
+ * @param {boolean} [withCredentials=false] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
  * @param {(error, response, body) => {}} [callback] - an anonymous function to use as a callback; if provided, executes the callback with the response information
  * @returns {Promise<{error: Error, response: Object, body: Object}>} Returns a promise of the response information if no callback was provided
  */
-module.exports.get = async (url, options, auth, withCredentials, callback) => {
+module.exports.get = async (url, options, auth, withCredentials=false, callback) => {
   // Create the request object and set the main request parameters
   const request = new PillowRequest();
   request.get(url).options(options).withCredentials(withCredentials);
@@ -48,11 +48,11 @@ module.exports.get = async (url, options, auth, withCredentials, callback) => {
  * @param {any} body - the payload to be sent in the request
  * @param {{headers?: {[header: string]: string|string[]}, params?: {[param: string]: string|string[]}}} options - the headers and parameters to send with the request
  * @param {{username?: string, password?: string, token?: string}} [auth] - the username and password or token value to use for authentication
- * @param {boolean} [withCredentials] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
+ * @param {boolean} [withCredentials=false] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
  * @param {(error, response, body) => {}} [callback] - an anonymous function to use as a callback; if provided, executes the callback with the response information
  * @returns {Promise<{error: Error, response: Object, body: Object}>} Returns a promise of the response information if no callback was provided
  */
-module.exports.post = async (url, body, options, auth, withCredentials, callback) => {
+module.exports.post = async (url, body, options, auth, withCredentials=false, callback) => {
   // Create the request object and set the main request parameters
   const request = new PillowRequest();
   request.post(url).setBody(body).options(options).withCredentials(withCredentials);
@@ -80,11 +80,11 @@ module.exports.post = async (url, body, options, auth, withCredentials, callback
  * @param {any} body - the payload to be sent in the request
  * @param {{headers?: {[header: string]: string|string[]}, params?: {[param: string]: string|string[]}}} options - the headers and parameters to send with the request
  * @param {{username?: string, password?: string, token?: string}} [auth] - the username and password or token value to use for authentication
- * @param {boolean} [withCredentials] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
+ * @param {boolean} [withCredentials=false] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
  * @param {(error, response, body) => {}} [callback] - an anonymous function to use as a callback; if provided, executes the callback with the response information
  * @returns {Promise<{error: Error, response: Object, body: Object}>} Returns a promise of the response information if no callback was provided
  */
-module.exports.put = async (url, body, options, auth, withCredentials, callback) => {
+module.exports.put = async (url, body, options, auth, withCredentials=false, callback) => {
   // Create the request object and set the main request parameters
   const request = new PillowRequest();
   request.put(url).setBody(body).options(options).withCredentials(withCredentials);
@@ -112,11 +112,11 @@ module.exports.put = async (url, body, options, auth, withCredentials, callback)
  * @param {any} body - the payload to be sent in the request
  * @param {{headers?: {[header: string]: string|string[]}, params?: {[param: string]: string|string[]}}} options - the headers and parameters to send with the request
  * @param {{username?: string, password?: string, token?: string}} [auth] - the username and password or token value to use for authentication
- * @param {boolean} [withCredentials] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
+ * @param {boolean} [withCredentials=false] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
  * @param {(error, response, body) => {}} [callback] - an anonymous function to use as a callback; if provided, executes the callback with the response information
  * @returns {Promise<{error: Error, response: Object, body: Object}>} Returns a promise of the response information if no callback was provided
  */
-module.exports.patch = async (url, body, options, auth, withCredentials, callback) => {
+module.exports.patch = async (url, body, options, auth, withCredentials=false, callback) => {
   // Create the request object and set the main request parameters
   const request = new PillowRequest();
   request.patch(url).setBody(body).options(options).withCredentials(withCredentials);
@@ -143,11 +143,11 @@ module.exports.patch = async (url, body, options, auth, withCredentials, callbac
  * @param {string} url - the full destination url for the request
  * @param {{headers?: {[header: string]: string|string[]}, params?: {[param: string]: string|string[]}}} options - the headers and parameters to send with the request
  * @param {{username?: string, password?: string, token?: string}} [auth] - the username and password or token value to use for authentication
- * @param {boolean} [withCredentials] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
+ * @param {boolean} [withCredentials=false] - if true and executing in a browser, stores the cookies sent in the request response; if false, does not
  * @param {(error, response, body) => {}} [callback] - an anonymous function to use as a callback; if provided, executes the callback with the response information
  * @returns {Promise<{error: Error, response: Object, body: Object}>} Returns a promise of the response information if no callback was provided
  */
-module.exports.delete = async (url, options, auth, withCredentials, callback) => {
+module.exports.delete = async (url, options, auth, withCredentials=false, callback) => {
   // Create the request object and set the main request parameters
   const request = new PillowRequest();
   request.delete(url).options(options).withCredentials(withCredentials);
