@@ -111,7 +111,7 @@ const response = await pillow.post('http://posturl.com', {color: 'red'});
 [back to top](#table-of-contents)
 
 ### Uncommon Request Methods
-Whaft if you want to perform a HTTP method other than GET, POST, PUT, PATCH, or DELETE? You can create a request object and use two step-wise request methods: `setMethod` and `setUrl`:
+What if you want to perform a HTTP method other than GET, POST, PUT, PATCH, or DELETE? You can create a request object and use two step-wise request methods: `setMethod` and `setUrl`:
 ```javascript
 const request = pillow.getRequest();
 request.setMethod('TRACE').setUrl('http://traceurl.com');
